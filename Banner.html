@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Portafolio NASA APIs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Banner NASA -->
+    <div id="nasa-banner">
+        <div class="banner-content">
+            <div class="banner-text">
+                <h2>Exploración Espacial</h2>
+                <p id="nasa-banner-date">Cargando datos de la NASA...</p>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <h1>APIs de la NASA</h1>
+        <p class="subtitle">Exploración del cosmos al alcance</p>
+    </header>
+
+    <!-- Barra de navegación con todas las APIs -->
+    <div class="topnav">
+        <a href="#" class="nav-link active" onclick="loadNASAContent('apod')">
+            <i class="tab-icon">🖼️</i>
+            <span class="tab-text">APOD</span>
+        </a>
+        <a href="#" class="nav-link" onclick="loadNASAContent('neows')">
+            <i class="tab-icon">☄️</i>
+            <span class="tab-text">Asteroides</span>
+        </a>
+        <a href="#" class="nav-link" onclick="loadNASAContent('epic')">
+            <i class="tab-icon">🌎</i>
+            <span class="tab-text">Tierra EPIC</span>
+        </a>
+        <a href="#" class="nav-link" onclick="loadNASAContent('rover')">
+            <i class="tab-icon">🧭</i>
+            <span class="tab-text">Rover</span>
+        </a>
+        <a href="#" class="nav-link" onclick="loadNASAContent('donki')">
+            <i class="tab-icon">🌌</i>
+            <span class="tab-text">Clima Espacial</span>
+        </a>
+    </div>
+
+    <!-- Contenido principal -->
+    <main id="main-content">
+        <div class="loader-container" id="loader">
+            <div class="loader"></div>
+            <p>Cargando datos espaciales...</p>
+        </div>
+        
+        <div id="nasa-content" class="nasa-data-container" style="display: none;">
+            <!-- Contenido dinámico de las APIs se cargará aquí -->
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 - Datos proporcionados por la NASA API</p>
+        <div class="footer-links">
+            <a href="https://api.nasa.gov/" target="_blank">NASA API Docs</a> | 
+            <a href="https://github.com/nasa" target="_blank">NASA en GitHub</a>
+        </div>
+    </footer>
+
+    <script src="Script.js"></script>
+</body>
+</html>
